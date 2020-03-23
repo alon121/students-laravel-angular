@@ -1,0 +1,76 @@
+<div class="header">
+    <a href="" id="menu-action">
+      <i class="fa fa-bars"></i>
+      <span>Close</span>
+    </a>
+    <div class="logo">
+      Simple Admin
+    </div>
+  </div>
+  <div class="sidebar">
+    <ul>
+      <li><a href="#"><i class="fa fa-users"></i><span>SHOW USERS</span></a></li>
+      <li><a href="#"><i class="fa fa-user-plus"></i><span>ADD USER</span></a></li>
+      <li><a href="#"><i class="fa fa-pencil"></i><span>EDIT USER</span></a></li>
+      <li><a href="#"><i class="fa fa-user-times"></i><span>DELETE USER</span></a></li>
+      <li><a href="#"><i class="fa fa-sign-out"></i><span>SIGN OUT</span></a></li>
+      </ul>
+  </div>
+  
+  <div class="main">
+    <div class="hipsum">
+      <div class="jumbotron">
+<h1> Student Admin - WebPals Test</h1>
+        <p> admin interface with  full CRUD operations.</p>
+      </div>
+<h2> Latest Users </h2>
+<div class="btn-group" role="group" aria-label="Basic example">
+  <select class="form-control form-control-lg"  #sort (change)="sortSelected(sort.value)">
+    <option >SORT DATA</option>
+    <option value="grade-min to max">BY GRADE - MIN TO MAX</option>
+    <option value="grade-max to min">BY GRADE - MAX TO MIN</option>
+    <option value="name - abc">BY NAME - (ABC)</option>
+    <option value="ID">BY ID</option>
+
+
+  </select>
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+</div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>Full Name</th>
+            <th>Class</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of pagedItems"> 
+            <th scope="row">{{student.id}}</th>
+            <td>{{student.Full_Name}}</td>
+            <td>{{student.class}}</td>
+            <td>{{student.grade}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <ul *ngIf="pager.pages && pager.pages.length"  class="pagination pagination-lg">
+        <li class="page-item"  [ngClass]="{disabled:pager.currentPage === 1}">
+          <a class="page-link" (click)="setPage(1)">First</a>
+        </li>
+
+
+        <li class="page-item" *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+          <a class="page-link" (click)="setPage(page)">{{page}}</a>
+      </li>
+     
+
+        <li  class="page-item" [ngClass]="{disabled:pager.currentPage === 1}">
+          <a   class="page-link" (click)="setPage(pager.currentPage - 1)">Previous</a>
+      </li>
+      </ul>
+    </div>
+  </div>  
+
+
+    
