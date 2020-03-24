@@ -9,7 +9,7 @@ import { ApiResponse } from 'src/app/shared/models/apiResponse/api-response';
 })
 export class ApiService {
 
-  private apiUrl = 'http://alonabargel.com/laravel/api/student';
+  private apiUrl = 'http://localhost:8000/api/student';
 
   constructor(private http:HttpClient, ) {}
 

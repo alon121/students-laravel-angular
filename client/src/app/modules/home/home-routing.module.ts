@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './components/login/login.component';
 import { StudentsComponent } from './components/students/students.component';
 import { AddComponent } from './components/Forms/add/add.component';
+import { LoginComponent } from './components/Forms/login/login.component';
+import { EditComponent } from './components/Forms/edit/edit.component';
+import { DeleteComponent } from './components/Forms/delete/delete.component';
 
 const routes: Routes = [
   
@@ -22,6 +24,14 @@ const routes: Routes = [
   {
     path: 'add-student',
     component: AddComponent
+  },
+  {
+    path: 'edit-student',
+    component: EditComponent
+  },
+  {
+    path: 'delete-student',
+    component: DeleteComponent
   }
 ];
 

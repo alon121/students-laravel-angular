@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'src/app/shared/models/user/user';
 import { AuthService } from 'src/app/core/authentication/auth.service';
-import { convertActionBinding } from '@angular/compiler/src/compiler_util/expression_converter';
 
 
 @Component({

@@ -1,10 +1,10 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl, FormsModule } from '@angular/forms';
 
 import {Router} from "@angular/router";
 import { ApiService } from 'src/app/core/http/api.service';
 import { Student } from 'src/app/shared/models/student/student';
-import { ReactiveFormsModule } from '@angular/forms'
+
 
 
 

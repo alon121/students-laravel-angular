@@ -10,9 +10,10 @@ import { AuthService } from './authentication/auth.service';
 import { AuthGuard } from './guards/auth.guard';
 import { TokenInterceptorService } from './interceptors/token/token-interceptor.service';
 import { StudentsComponent } from '../modules/home/components/students/students.component';
-import { LoginComponent } from '../modules/home/components/login/login.component';
+import { LoginComponent } from '../modules/home/components/Forms/login/login.component';
 import { HomeRoutingModule } from '../modules/home/home-routing.module';
 import { AddComponent } from '../modules/home/components/Forms/add/add.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AddComponent } from '../modules/home/components/Forms/add/add.component
     StudentsComponent,
     HeaderComponent,
     FooterComponent,
-    AddComponent
+    AddComponent,
+    SidebarComponent
     
   ],
   imports: [
