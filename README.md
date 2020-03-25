@@ -14,7 +14,7 @@
 ### run command "npm install" to install all package.
 ### run command to run dev mode. 
 
-## live demo : https://alonabargel.com/studentsapp/login
+## live demo : https://alonabargel.com/studentsapp
 
 
 
