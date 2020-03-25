@@ -5,7 +5,7 @@
 ### clone or download the repo. 
 
 ## Backend: 
-##create database and update the .env file.
+### create database and update the .env file.
 ### navigate to "backend" folder and run command "composer install" 
 ### php artisan serve - to run dev mode.
 
