@@ -1,0 +1,13 @@
+<div class="row">
+  <h2>DELETE STUDENT</h2>
+
+  <div *ngIf="!loading"> LOADING.... PLEASE WAIT</div>
+
+  <select    class="form-control" type="number" [(ngModel)]="selectStudent">
+    <option [ngValue]="undefined" disabled  selected> SELECT STUDENT.... </option>
+    <option *ngFor="let student of studentsNames" [ngValue]="student">{{student.name}}</option>
+  </select>
+    <button class="btn btn-danger" [disabled]="selectStudent == undefined"  (click)="deleteItem(selectStudent)">DELETE STUDENT</button>
+
+</div>  
+
